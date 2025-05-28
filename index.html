@@ -13,7 +13,7 @@
   <!-- Enhanced Navigation -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
+      <a href="#" class="nav-logo" onclick="showPage('home')">
         <img src="/placeholder.svg?height=50&width=50" alt="Logo" class="logo">
         <span class="logo-text">Hack The Cut</span>
       </a>
@@ -21,32 +21,32 @@
       <nav class="nav-menu">
         <ul class="nav-links">
           <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#" class="nav-link" onclick="showPage('home')">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#programs" class="nav-link dropdown-toggle">Programs <span class="dropdown-arrow">▼</span></a>
+            <a href="#" class="nav-link dropdown-toggle">Programs <span class="dropdown-arrow">▼</span></a>
             <ul class="dropdown-menu">
-              <li><a href="#cyber-security">Cyber Security</a></li>
-              <li><a href="#programming">Programming</a></li>
-              <li><a href="#photography">Photography</a></li>
-              <li><a href="#seo">SEO</a></li>
-              <li><a href="#video-editing">Video Editing</a></li>
+              <li><a href="#" onclick="showPage('cyber-security')">Cyber Security</a></li>
+              <li><a href="#" onclick="showPage('programming')">Programming</a></li>
+              <li><a href="#" onclick="showPage('photography')">Photography</a></li>
+              <li><a href="#" onclick="showPage('seo')">SEO</a></li>
+              <li><a href="#" onclick="showPage('video-editing')">Video Editing</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#teams" class="nav-link dropdown-toggle">Teams <span class="dropdown-arrow">▼</span></a>
+            <a href="#" class="nav-link dropdown-toggle">Teams <span class="dropdown-arrow">▼</span></a>
             <ul class="dropdown-menu">
-              <li><a href="#development-team">Development Team</a></li>
-              <li><a href="#design-team">Design Team</a></li>
-              <li><a href="#security-team">Security Team</a></li>
-              <li><a href="#content-team">Content Team</a></li>
+              <li><a href="#" onclick="showPage('development-team')">Development Team</a></li>
+              <li><a href="#" onclick="showPage('design-team')">Design Team</a></li>
+              <li><a href="#" onclick="showPage('security-team')">Security Team</a></li>
+              <li><a href="#" onclick="showPage('content-team')">Content Team</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link">About Us</a>
+            <a href="#" class="nav-link" onclick="showPage('about')">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#" class="nav-link" onclick="showPage('contact')">Contact</a>
           </li>
         </ul>
       </nav>
@@ -59,402 +59,669 @@
     </div>
   </header>
 
-  <!-- Enhanced Hero Section with 5-slide carousel -->
-  <section id="home" class="hero-slider">
-    <div class="slide active" style="background-image: url('images/cyber security.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Cyber Security</h1>
-      <p class="slide-description">Protecting the digital future with advanced security protocols and ethical hacking techniques.</p>
-      <button class="cta-button">Learn More</button>
+  <!-- HOME PAGE -->
+  <div id="home-page" class="page">
+    <!-- Enhanced Hero Section with 5-slide carousel -->
+    <section id="home" class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cyber%20security-D42JAD1YsEZdAllJ2RJzUEMPOFEBmu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Cyber Security</h1>
+          <p class="slide-description">Protecting the digital future with advanced security protocols and ethical hacking techniques.</p>
+          <button class="cta-button" onclick="showPage('cyber-security')">Learn More</button>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image: url('images/Photography.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Photography</h1>
-      <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
-      <button class="cta-button">Explore Gallery</button>
+      <div class="slide" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Photography-JOG0FmDiTGpARCkYcnxYdgl1hsizBJ.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Photography</h1>
+          <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
+          <button class="cta-button" onclick="showPage('photography')">Explore Gallery</button>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image: url('images/programming.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Programming</h1>
-      <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
-      <button class="cta-button">Start Coding</button>
+      <div class="slide" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/programming-Mu4HA8fOSHoZzyzX9L26x8oOCPe7bu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Programming</h1>
+          <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
+          <button class="cta-button" onclick="showPage('programming')">Start Coding</button>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image: url('images/seo.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Search Engine Optimization</h1>
-      <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
-      <button class="cta-button">Boost Rankings</button>
+      <div class="slide" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SEO-OBnreT2W8nDzTjDBFjiCIrD3oMNGWu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Search Engine Optimization</h1>
+          <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
+          <button class="cta-button" onclick="showPage('seo')">Boost Rankings</button>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image: url('images/video-editing.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Video Editing</h1>
-      <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
-      <button class="cta-button">Create Videos</button>
+      <div class="slide" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video%20editing-ksXDH1lpnqEKNnl30lFeMc3GMqttSh.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Video Editing</h1>
+          <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
+          <button class="cta-button" onclick="showPage('video-editing')">Create Videos</button>
+        </div>
       </div>
-    </div>
-    <!-- Make sure the image URLs match the actual filenames and folder structure in your project.
-    If your images are in the 'assets' folder directly (not in a subfolder), and are named:
-    <!-- Make sure the image URLs match the actual filenames and folder structure in your project.
-    If your images are in the 'assets' folder directly (not in a subfolder), and are named:
-    - cyber-secur.png
-    - photography.png
-    - programming.png
-    - seo.png
-    - video-editing.png
-    then use the following: -->
 
-    <div class="slide active" style="background-image: url('assets/cyber security.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content"></div>
-      <h1 class="slide-title">Cyber Security</h1>
-      <p class="slide-description">Protecting the digital future with advanced security protocols and ethical hacking techniques.</p>
-      <button class="cta-button">Learn More</button>
+      <button class="nav-btn prev" aria-label="Previous slide">‹</button>
+      <button class="nav-btn next" aria-label="Next slide">›</button>
+      
+      <div class="slide-indicators">
+        <button class="indicator active" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
+        <button class="indicator" data-slide="3"></button>
+        <button class="indicator" data-slide="4"></button>
       </div>
-    </div>
+    </section>
 
-    <div class="slide" style="background-image: url('assets/Photography.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Photography</h1>
-      <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
-      <button class="cta-button">Explore Gallery</button>
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Hack The Cut Club</h2>
+          <p class="section-subtitle">Empowering students with digital skills for tomorrow's world</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Our Mission</h3>
+            <p>At Hack The Cut Club, we believe in nurturing the next generation of digital innovators. Our comprehensive programs in programming, cybersecurity, photography, SEO, and video editing provide students with practical skills that extend far beyond the classroom.</p>
+            
+            <h3>What We Offer</h3>
+            <ul class="feature-list">
+              <li>Hands-on learning experiences in cutting-edge technologies</li>
+              <li>Industry-relevant projects and real-world applications</li>
+              <li>Mentorship from experienced professionals and educators</li>
+              <li>Collaborative environment fostering creativity and innovation</li>
+              <li>Preparation for future careers in technology and digital media</li>
+            </ul>
+            
+            <h3>Our Vision</h3>
+            <p>We envision a future where every student has the opportunity to explore, create, and excel in the digital realm. Through our diverse programs, we're building a community of young professionals ready to tackle tomorrow's challenges.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>150+</h4>
+              <p>Active Students</p>
+            </div>
+            <div class="stat-card">
+              <h4>5</h4>
+              <p>Specialized Programs</p>
+            </div>
+            <div class="stat-card">
+              <h4>50+</h4>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+              <h4>10+</h4>
+              <p>Expert Mentors</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="slide" style="background-image: url('assets/programming.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Programming</h1>
-      <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
-      <button class="cta-button">Start Coding</button>
+    <!-- Enhanced Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What Our Community Says</h2>
+          <p class="section-subtitle">Real experiences from our students and educators</p>
+        </div>
+        
+        <div class="testimonial-carousel">
+          <div class="testimonial-container">
+            <div class="testimonial active">
+              <div class="testimonial-content">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">This club changed my life! It helped me tremendously in my programming journey and opened doors I never knew existed.</p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4 class="author-name">Bhavishya</h4>
+                    <p class="author-role">Class 11 Student</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">Teaching is my passion and I am keenly interested in programming. This club provides the perfect platform to share knowledge and inspire young minds.</p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4 class="author-name">Mr. Abhishek</h4>
+                    <p class="author-role">Computer Teacher</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">Programming is not just theory now - it's possible to do practicals before even going to college! The hands-on approach here is incredible.</p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4 class="author-name">Sahir</h4>
+                    <p class="author-role">Class 11 Student</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">I enhanced my IT skills significantly with the help of Abhishek sir. The personalized guidance and support made all the difference.</p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4 class="author-name">Yuvraj</h4>
+                    <p class="author-role">Class 11 Student</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-nav">
+            <button class="testimonial-prev">‹</button>
+            <button class="testimonial-next">›</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="slide" style="background-image: url('assets/SEO.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Search Engine Optimization</h1>
-      <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
-      <button class="cta-button">Boost Rankings</button>
+    <!-- Enhanced FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about our programs</p>
+        </div>
+        
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can school students really create professional websites?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>With proper guidance in HTML, CSS, and JavaScript, our students regularly create responsive, functional websites that meet professional standards. Our hands-on approach ensures practical learning.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What kind of websites can you build?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our students build a wide variety of websites including school sites, personal portfolios, business pages, e-commerce platforms, and interactive web applications. Each project is tailored to real-world needs.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long does it take to build a website?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Most projects are completed within 3–7 days, depending on complexity and requirements. Simple websites can be done faster, while more complex applications may take longer.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How can I get a website made by your team?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Simply contact us through our contact form or email us directly. We'll discuss your requirements and provide a timeline and quote for your project.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+  </div>
 
-    <div class="slide" style="background-image: url('assets/video editing.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-      <h1 class="slide-title">Video Editing</h1>
-      <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
-      <button class="cta-button">Create Videos</button>
+  <!-- PROGRAMMING PAGE -->
+  <div id="programming-page" class="page" style="display: none;">
+    <section class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/programming-Mu4HA8fOSHoZzyzX9L26x8oOCPe7bu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Programming Excellence</h1>
+          <p class="slide-description">Master the art of coding with Python, Java, C++, HTML5, and cutting-edge web technologies.</p>
+          <button class="cta-button" onclick="showPage('contact')">Join Program</button>
+        </div>
       </div>
-    </div>
-      </div>
-    </div>
-    <!-- <div class="slide" style="background-image: url('/images/photography.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Photography</h1>
-        <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
-        <button class="cta-button">Explore Gallery</button>
-      </div>
-    </div> -->
-<!-- 
-    <div class="slide" style="background-image: url('/images/programming.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Programming</h1>
-        <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
-        <button class="cta-button">Start Coding</button>
-      </div>
-    </div> -->
-
-    <!-- <div class="slide" style="background-image: url('/images/seo.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Search Engine Optimization</h1>
-        <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
-        <button class="cta-button">Boost Rankings</button>
-      </div>
-    </div> -->
-<!-- 
-    <div class="slide" style="background-image: url('/images/video-editing.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Video Editing</h1>
-        <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
-        <button class="cta-button">Create Videos</button>
-      </div>
-    </div> -->
-
-    <button class="nav-btn prev" aria-label="Previous slide">‹</button>
-    <button class="nav-btn next" aria-label="Next slide">›</button>
+    </section>
     
-    <div class="slide-indicators">
-      <button class="indicator active" data-slide="0"></button>
-      <button class="indicator" data-slide="1"></button>
-      <button class="indicator" data-slide="2"></button>
-      <button class="indicator" data-slide="3"></button>
-      <button class="indicator" data-slide="4"></button>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">About Hack The Cut Club</h2>
-        <p class="section-subtitle">Empowering students with digital skills for tomorrow's world</p>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <h3>Our Mission</h3>
-          <p>At Hack The Cut Club, we believe in nurturing the next generation of digital innovators. Our comprehensive programs in programming, cybersecurity, photography, SEO, and video editing provide students with practical skills that extend far beyond the classroom.</p>
-          
-          <h3>What We Offer</h3>
-          <ul class="feature-list">
-            <li>Hands-on learning experiences in cutting-edge technologies</li>
-            <li>Industry-relevant projects and real-world applications</li>
-            <li>Mentorship from experienced professionals and educators</li>
-            <li>Collaborative environment fostering creativity and innovation</li>
-            <li>Preparation for future careers in technology and digital media</li>
-          </ul>
-          
-          <h3>Our Vision</h3>
-          <p>We envision a future where every student has the opportunity to explore, create, and excel in the digital realm. Through our diverse programs, we're building a community of young professionals ready to tackle tomorrow's challenges.</p>
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Programming Track</h2>
+          <p class="section-subtitle">From basics to advanced development</p>
         </div>
         
-        <div class="about-stats">
-          <div class="stat-card">
-            <h4>150+</h4>
-            <p>Active Students</p>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>What You'll Learn</h3>
+            <ul class="feature-list">
+              <li>Python programming fundamentals and advanced concepts</li>
+              <li>Java object-oriented programming</li>
+              <li>C++ system programming and data structures</li>
+              <li>HTML5, CSS3, and JavaScript for web development</li>
+              <li>Database management and SQL</li>
+              <li>Version control with Git and GitHub</li>
+              <li>Software development best practices</li>
+            </ul>
+            
+            <h3>Career Opportunities</h3>
+            <p>Our programming track prepares you for careers in software development, web development, mobile app development, data science, and system administration.</p>
           </div>
-          <div class="stat-card">
-            <h4>5</h4>
-            <p>Specialized Programs</p>
-          </div>
-          <div class="stat-card">
-            <h4>50+</h4>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat-card">
-            <h4>10+</h4>
-            <p>Expert Mentors</p>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>4</h4>
+              <p>Programming Languages</p>
+            </div>
+            <div class="stat-card">
+              <h4>20+</h4>
+              <p>Projects Built</p>
+            </div>
+            <div class="stat-card">
+              <h4>50+</h4>
+              <p>Students Trained</p>
+            </div>
+            <div class="stat-card">
+              <h4>95%</h4>
+              <p>Success Rate</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- Enhanced Testimonials Section -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">What Our Community Says</h2>
-        <p class="section-subtitle">Real experiences from our students and educators</p>
+  <!-- CYBER SECURITY PAGE -->
+  <div id="cyber-security-page" class="page" style="display: none;">
+    <section class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cyber%20security-D42JAD1YsEZdAllJ2RJzUEMPOFEBmu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Cyber Security Mastery</h1>
+          <p class="slide-description">Protect digital assets and learn ethical hacking techniques in our comprehensive security program.</p>
+          <button class="cta-button" onclick="showPage('contact')">Secure Your Future</button>
+        </div>
       </div>
-      
-      <div class="testimonial-carousel">
-        <div class="testimonial-container">
-          <div class="testimonial active">
-            <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">This club changed my life! It helped me tremendously in my programming journey and opened doors I never knew existed.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Bhavishya</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
+    </section>
+    
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Cyber Security Program</h2>
+          <p class="section-subtitle">Defending the digital frontier</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Core Curriculum</h3>
+            <ul class="feature-list">
+              <li>Network security fundamentals</li>
+              <li>Ethical hacking and penetration testing</li>
+              <li>Cryptography and data protection</li>
+              <li>Incident response and forensics</li>
+              <li>Security risk assessment</li>
+              <li>Compliance and governance</li>
+              <li>Hands-on lab exercises</li>
+            </ul>
+            
+            <h3>Industry Recognition</h3>
+            <p>Our cyber security program aligns with industry standards and prepares students for certifications like CEH, CISSP, and CompTIA Security+.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>100%</h4>
+              <p>Hands-on Training</p>
+            </div>
+            <div class="stat-card">
+              <h4>15+</h4>
+              <p>Security Tools</p>
+            </div>
+            <div class="stat-card">
+              <h4>30+</h4>
+              <p>Lab Exercises</p>
+            </div>
+            <div class="stat-card">
+              <h4>24/7</h4>
+              <p>Lab Access</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PHOTOGRAPHY PAGE -->
+  <div id="photography-page" class="page" style="display: none;">
+    <section class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Photography-JOG0FmDiTGpARCkYcnxYdgl1hsizBJ.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Photography Artistry</h1>
+          <p class="slide-description">Capture life's moments with professional techniques and creative vision.</p>
+          <button class="cta-button" onclick="showPage('contact')">Start Creating</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Photography Program</h2>
+          <p class="section-subtitle">Visual storytelling through the lens</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Photography Skills</h3>
+            <ul class="feature-list">
+              <li>Camera operation and manual settings</li>
+              <li>Composition and framing techniques</li>
+              <li>Lighting and exposure control</li>
+              <li>Portrait and landscape photography</li>
+              <li>Photo editing with Adobe Lightroom and Photoshop</li>
+              <li>Digital workflow and file management</li>
+              <li>Portfolio development</li>
+            </ul>
+            
+            <h3>Equipment & Studio</h3>
+            <p>Access to professional DSLR cameras, lighting equipment, and a fully equipped photography studio for hands-on learning.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>10+</h4>
+              <p>Camera Systems</p>
+            </div>
+            <div class="stat-card">
+              <h4>500+</h4>
+              <p>Photos Captured</p>
+            </div>
+            <div class="stat-card">
+              <h4>25+</h4>
+              <p>Students Enrolled</p>
+            </div>
+            <div class="stat-card">
+              <h4>5</h4>
+              <p>Exhibitions Held</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SEO PAGE -->
+  <div id="seo-page" class="page" style="display: none;">
+    <section class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SEO-OBnreT2W8nDzTjDBFjiCIrD3oMNGWu.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">SEO Optimization</h1>
+          <p class="slide-description">Master search engine optimization and drive organic traffic to websites.</p>
+          <button class="cta-button" onclick="showPage('contact')">Boost Rankings</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">SEO Program</h2>
+          <p class="section-subtitle">Dominate search engine results</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>SEO Mastery</h3>
+            <ul class="feature-list">
+              <li>Keyword research and analysis</li>
+              <li>On-page optimization techniques</li>
+              <li>Technical SEO and site structure</li>
+              <li>Content strategy and creation</li>
+              <li>Link building and off-page SEO</li>
+              <li>Analytics and performance tracking</li>
+              <li>Local SEO and mobile optimization</li>
+            </ul>
+            
+            <h3>Tools & Analytics</h3>
+            <p>Learn to use industry-standard tools like Google Analytics, Search Console, SEMrush, and Ahrefs for comprehensive SEO analysis.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>200%</h4>
+              <p>Avg Traffic Increase</p>
+            </div>
+            <div class="stat-card">
+              <h4>10+</h4>
+              <p>SEO Tools</p>
+            </div>
+            <div class="stat-card">
+              <h4>20+</h4>
+              <p>Websites Optimized</p>
+            </div>
+            <div class="stat-card">
+              <h4>85%</h4>
+              <p>First Page Rankings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIDEO EDITING PAGE -->
+  <div id="video-editing-page" class="page" style="display: none;">
+    <section class="hero-slider">
+      <div class="slide active" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video%20editing-ksXDH1lpnqEKNnl30lFeMc3GMqttSh.png');">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Video Editing Mastery</h1>
+          <p class="slide-description">Create compelling visual stories through professional video production and editing.</p>
+          <button class="cta-button" onclick="showPage('contact')">Start Creating</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Video Editing Program</h2>
+          <p class="section-subtitle">Bringing stories to life</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Video Production Skills</h3>
+            <ul class="feature-list">
+              <li>Video editing with Adobe Premiere Pro</li>
+              <li>Motion graphics and After Effects</li>
+              <li>Color correction and grading</li>
+              <li>Audio editing and sound design</li>
+              <li>Storytelling and narrative structure</li>
+              <li>YouTube and social media optimization</li>
+              <li>Live streaming and broadcasting</li>
+            </ul>
+            
+            <h3>Creative Projects</h3>
+            <p>Work on real projects including promotional videos, documentaries, music videos, and social media content for local businesses and events.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>50+</h4>
+              <p>Videos Produced</p>
+            </div>
+            <div class="stat-card">
+              <h4>5</h4>
+              <p>Editing Suites</p>
+            </div>
+            <div class="stat-card">
+              <h4>30+</h4>
+              <p>Students Trained</p>
+            </div>
+            <div class="stat-card">
+              <h4>1M+</h4>
+              <p>Total Views</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about-page" class="page" style="display: none;">
+    <section class="about-section" style="margin-top: 80px; padding-top: 50px;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Hack The Cut Club</h2>
+          <p class="section-subtitle">Empowering students with digital skills for tomorrow's world</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Our Story</h3>
+            <p>Founded with a vision to bridge the gap between traditional education and modern digital skills, Hack The Cut Club has become a premier destination for students passionate about technology and creativity.</p>
+            
+            <h3>Our Mission</h3>
+            <p>We believe in nurturing the next generation of digital innovators through hands-on learning, mentorship, and real-world project experience. Our comprehensive programs prepare students for the challenges and opportunities of the digital age.</p>
+            
+            <h3>Core Values</h3>
+            <ul class="feature-list">
+              <li>Innovation and creativity in learning</li>
+              <li>Practical, hands-on skill development</li>
+              <li>Collaborative and inclusive environment</li>
+              <li>Industry-relevant curriculum</li>
+              <li>Continuous learning and adaptation</li>
+              <li>Ethical technology practices</li>
+            </ul>
+            
+            <h3>Our Impact</h3>
+            <p>Since our inception, we've trained hundreds of students, completed dozens of real-world projects, and built a thriving community of young tech enthusiasts ready to make their mark in the digital world.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>150+</h4>
+              <p>Active Students</p>
+            </div>
+            <div class="stat-card">
+              <h4>5</h4>
+              <p>Specialized Programs</p>
+            </div>
+            <div class="stat-card">
+              <h4>50+</h4>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+              <h4>10+</h4>
+              <p>Expert Mentors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact-page" class="page" style="display: none;">
+    <section id="contact" class="contact-section" style="margin-top: 80px; padding-top: 50px;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Ready to start your digital journey? We'd love to hear from you!</p>
+        </div>
+        
+        <div class="contact-content">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" class="form-name" placeholder="Enter your full name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-email" placeholder="Enter your email address" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="programs">Program Information</option>
+                <option value="website">Website Development</option>
+                <option value="collaboration">Collaboration</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-message" placeholder="Tell us about your project or inquiry..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <div class="btn-loader"></div>
+            </button>
+          </form>
+          
+          <div class="contact-info">
+            <div class="info-card">
+              <h3>Contact Information</h3>
+              <div class="info-item">
+                <strong>Email:</strong> hackthecut@school.edu
+              </div>
+              <div class="info-item">
+                <strong>Phone:</strong> +1 (555) 123-4567
+              </div>
+              <div class="info-item">
+                <strong>Location:</strong> Computer Lab, Main Building
+              </div>
+            </div>
+            
+            <div class="info-card">
+              <h3>Club Hours</h3>
+              <div class="info-item">
+                <strong>Monday - Friday:</strong> 3:30 PM - 5:30 PM
+              </div>
+              <div class="info-item">
+                <strong>Saturday:</strong> 10:00 AM - 2:00 PM
+              </div>
+              <div class="info-item">
+                <strong>Sunday:</strong> Closed
               </div>
             </div>
           </div>
-          
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">Teaching is my passion and I am keenly interested in programming. This club provides the perfect platform to share knowledge and inspire young minds.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Mr. Abhishek</h4>
-                  <p class="author-role">Computer Teacher</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">Programming is not just theory now - it's possible to do practicals before even going to college! The hands-on approach here is incredible.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Sahir</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">I enhanced my IT skills significantly with the help of Abhishek sir. The personalized guidance and support made all the difference.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Yuvraj</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         
-        <div class="testimonial-nav">
-          <button class="testimonial-prev">‹</button>
-          <button class="testimonial-next">›</button>
-        </div>
+        <p class="form-status"></p>
       </div>
-    </div>
-  </section>
-
-  <!-- Enhanced FAQ Section -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about our programs</p>
-      </div>
-      
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Can school students really create professional websites?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>With proper guidance in HTML, CSS, and JavaScript, our students regularly create responsive, functional websites that meet professional standards. Our hands-on approach ensures practical learning.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What kind of websites can you build?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Our students build a wide variety of websites including school sites, personal portfolios, business pages, e-commerce platforms, and interactive web applications. Each project is tailored to real-world needs.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How long does it take to build a website?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Most projects are completed within 3–7 days, depending on complexity and requirements. Simple websites can be done faster, while more complex applications may take longer.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How can I get a website made by your team?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Simply contact us through our contact form below or email us directly. We'll discuss your requirements and provide a timeline and quote for your project.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Enhanced Contact Form -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Ready to start your digital journey? We'd love to hear from you!</p>
-      </div>
-      
-      <div class="contact-content">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" class="form-name" placeholder="Enter your full name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="form-email" placeholder="Enter your email address" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" class="form-subject" required>
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="programs">Program Information</option>
-              <option value="website">Website Development</option>
-              <option value="collaboration">Collaboration</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" class="form-message" placeholder="Tell us about your project or inquiry..." required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <div class="btn-loader"></div>
-          </button>
-        </form>
-        
-        <div class="contact-info">
-          <div class="info-card">
-            <h3>Contact Information</h3>
-            <div class="info-item">
-              <strong>Email:</strong> hackthecut@school.edu
-            </div>
-            <div class="info-item">
-              <strong>Phone:</strong> +1 (555) 123-4567
-            </div>
-            <div class="info-item">
-              <strong>Location:</strong> Computer Lab, Main Building
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <h3>Club Hours</h3>
-            <div class="info-item">
-              <strong>Monday - Friday:</strong> 3:30 PM - 5:30 PM
-            </div>
-            <div class="info-item">
-              <strong>Saturday:</strong> 10:00 AM - 2:00 PM
-            </div>
-            <div class="info-item">
-              <strong>Sunday:</strong> Closed
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <p class="form-status"></p>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -468,20 +735,20 @@
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            <li><a href="#" onclick="showPage('programming')">Programs</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h4>Programs</h4>
           <ul>
-            <li><a href="#programming">Programming</a></li>
-            <li><a href="#cyber-security">Cyber Security</a></li>
-            <li><a href="#photography">Photography</a></li>
-            <li><a href="#seo">SEO</a></li>
+            <li><a href="#" onclick="showPage('programming')">Programming</a></li>
+            <li><a href="#" onclick="showPage('cyber-security')">Cyber Security</a></li>
+            <li><a href="#" onclick="showPage('photography')">Photography</a></li>
+            <li><a href="#" onclick="showPage('seo')">SEO</a></li>
           </ul>
         </div>
       </div>
@@ -495,5 +762,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
