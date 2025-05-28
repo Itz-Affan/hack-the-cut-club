@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -60,6 +59,8 @@ app.post('/contact', async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
