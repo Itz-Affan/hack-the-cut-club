@@ -4,28 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hack The Cut Club - Digital Excellence</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <!-- Enhanced Navigation -->
-  <header class="navbar">
+  <!-- Navigation -->
+  <header class="navbar" role="banner">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <img src="/placeholder.svg?height=50&width=50" alt="Logo" class="logo">
+      <a href="#" class="nav-logo" aria-label="Hack The Cut Home">
+        <img src="assets/logo.svg" alt="Hack The Cut Logo" class="logo" width="50" height="50" />
         <span class="logo-text">Hack The Cut</span>
       </a>
-      
-      <nav class="nav-menu">
+
+      <nav class="nav-menu" role="navigation" aria-label="Primary navigation">
         <ul class="nav-links">
           <li class="nav-item">
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#programs" class="nav-link dropdown-toggle">Programs <span class="dropdown-arrow">▼</span></a>
-            <ul class="dropdown-menu">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Programs <span class="dropdown-arrow">▼</span>
+            </button>
+            <ul class="dropdown-menu" aria-label="Programs submenu">
               <li><a href="#cyber-security">Cyber Security</a></li>
               <li><a href="#programming">Programming</a></li>
               <li><a href="#photography">Photography</a></li>
@@ -34,8 +39,10 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#teams" class="nav-link dropdown-toggle">Teams <span class="dropdown-arrow">▼</span></a>
-            <ul class="dropdown-menu">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Teams <span class="dropdown-arrow">▼</span>
+            </button>
+            <ul class="dropdown-menu" aria-label="Teams submenu">
               <li><a href="#development-team">Development Team</a></li>
               <li><a href="#design-team">Design Team</a></li>
               <li><a href="#security-team">Security Team</a></li>
@@ -50,8 +57,8 @@
           </li>
         </ul>
       </nav>
-      
-      <button class="mobile-menu-toggle">
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -59,100 +66,62 @@
     </div>
   </header>
 
-  <!-- Enhanced Hero Section with 5-slide carousel -->
-  <section id="home" class="hero-slider">
+  <!-- Hero Slider Section -->
+  <section id="home" class="hero-slider" aria-label="Featured Programs">
     <div class="slide active" style="background-image: url('assets/cyber-security.png');">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-      <h1 class="slide-title">Cyber Security</h1>
-      <p class="slide-description">Protecting the digital future with advanced security protocols and ethical hacking techniques.</p>
-      <button class="cta-button">Learn More</button>
+        <h1 class="slide-title">Cyber Security</h1>
+        <p class="slide-description">Protecting the digital future with advanced security protocols and ethical hacking techniques.</p>
+        <button class="cta-button" type="button">Learn More</button>
       </div>
     </div>
 
     <div class="slide" style="background-image: url('assets/photography.png');">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-      <h1 class="slide-title">Photography</h1>
-      <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
-      <button class="cta-button">Explore Gallery</button>
+        <h1 class="slide-title">Photography</h1>
+        <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
+        <button class="cta-button" type="button">Explore Gallery</button>
       </div>
     </div>
 
     <div class="slide" style="background-image: url('assets/programming.png');">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-      <h1 class="slide-title">Programming</h1>
-      <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
-      <button class="cta-button">Start Coding</button>
+        <h1 class="slide-title">Programming</h1>
+        <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
+        <button class="cta-button" type="button">Start Coding</button>
       </div>
     </div>
 
     <div class="slide" style="background-image: url('assets/seo.png');">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-      <h1 class="slide-title">Search Engine Optimization</h1>
-      <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
-      <button class="cta-button">Boost Rankings</button>
+        <h1 class="slide-title">Search Engine Optimization</h1>
+        <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
+        <button class="cta-button" type="button">Boost Rankings</button>
       </div>
     </div>
 
     <div class="slide" style="background-image: url('assets/video-editing.png');">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-      <h1 class="slide-title">Video Editing</h1>
-      <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
-      <button class="cta-button">Create Videos</button>
-      </div>
-    </div>
-      </div>
-    </div>
-
-    <!-- <div class="slide" style="background-image: url('/images/photography.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Photography</h1>
-        <p class="slide-description">Capturing moments that matter through creative visual storytelling and professional techniques.</p>
-        <button class="cta-button">Explore Gallery</button>
-      </div>
-    </div> -->
-<!-- 
-    <div class="slide" style="background-image: url('/images/programming.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Programming</h1>
-        <p class="slide-description">Turning innovative ideas into digital reality with cutting-edge development skills.</p>
-        <button class="cta-button">Start Coding</button>
-      </div>
-    </div> -->
-
-    <!-- <div class="slide" style="background-image: url('/images/seo.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1 class="slide-title">Search Engine Optimization</h1>
-        <p class="slide-description">Making your content discoverable and driving organic traffic through strategic SEO.</p>
-        <button class="cta-button">Boost Rankings</button>
-      </div>
-    </div> -->
-<!-- 
-    <div class="slide" style="background-image: url('/images/video-editing.png');">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
         <h1 class="slide-title">Video Editing</h1>
         <p class="slide-description">Bringing your stories to life through professional video production and editing mastery.</p>
-        <button class="cta-button">Create Videos</button>
+        <button class="cta-button" type="button">Create Videos</button>
       </div>
-    </div> -->
+    </div>
 
     <button class="nav-btn prev" aria-label="Previous slide">‹</button>
     <button class="nav-btn next" aria-label="Next slide">›</button>
-    
-    <div class="slide-indicators">
-      <button class="indicator active" data-slide="0"></button>
-      <button class="indicator" data-slide="1"></button>
-      <button class="indicator" data-slide="2"></button>
-      <button class="indicator" data-slide="3"></button>
-      <button class="indicator" data-slide="4"></button>
+
+    <div class="slide-indicators" role="tablist" aria-label="Slide indicators">
+      <button class="indicator active" data-slide="0" role="tab" aria-selected="true" aria-controls="slide1" id="indicator1"></button>
+      <button class="indicator" data-slide="1" role="tab" aria-selected="false" aria-controls="slide2" id="indicator2"></button>
+      <button class="indicator" data-slide="2" role="tab" aria-selected="false" aria-controls="slide3" id="indicator3"></button>
+      <button class="indicator" data-slide="3" role="tab" aria-selected="false" aria-controls="slide4" id="indicator4"></button>
+      <button class="indicator" data-slide="4" role="tab" aria-selected="false" aria-controls="slide5" id="indicator5"></button>
     </div>
   </section>
 
@@ -163,12 +132,12 @@
         <h2 class="section-title">About Hack The Cut Club</h2>
         <p class="section-subtitle">Empowering students with digital skills for tomorrow's world</p>
       </div>
-      
+
       <div class="about-content">
         <div class="about-text">
           <h3>Our Mission</h3>
           <p>At Hack The Cut Club, we believe in nurturing the next generation of digital innovators. Our comprehensive programs in programming, cybersecurity, photography, SEO, and video editing provide students with practical skills that extend far beyond the classroom.</p>
-          
+
           <h3>What We Offer</h3>
           <ul class="feature-list">
             <li>Hands-on learning experiences in cutting-edge technologies</li>
@@ -177,11 +146,11 @@
             <li>Collaborative environment fostering creativity and innovation</li>
             <li>Preparation for future careers in technology and digital media</li>
           </ul>
-          
+
           <h3>Our Vision</h3>
           <p>We envision a future where every student has the opportunity to explore, create, and excel in the digital realm. Through our diverse programs, we're building a community of young professionals ready to tackle tomorrow's challenges.</p>
         </div>
-        
+
         <div class="about-stats">
           <div class="stat-card">
             <h4>150+</h4>
@@ -204,240 +173,219 @@
     </div>
   </section>
 
-  <!-- Enhanced Testimonials Section -->
-  <section class="testimonials-section">
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" aria-label="Testimonials">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">What Our Community Says</h2>
         <p class="section-subtitle">Real experiences from our students and educators</p>
       </div>
-      
+
       <div class="testimonial-carousel">
         <div class="testimonial-container">
-          <div class="testimonial active">
+          <article class="testimonial active" aria-live="polite">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
+              <div class="quote-icon" aria-hidden="true">"</div>
               <p class="testimonial-text">This club changed my life! It helped me tremendously in my programming journey and opened doors I never knew existed.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Bhavishya</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
-              </div>
+              <footer class="testimonial-author">
+                <h4 class="author-name">Bhavishya</h4>
+                <p class="author-role">Class 11 Student</p>
+              </footer>
             </div>
-          </div>
-          
-          <div class="testimonial">
+          </article>
+
+          <article class="testimonial">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
+              <div class="quote-icon" aria-hidden="true">"</div>
               <p class="testimonial-text">Teaching is my passion and I am keenly interested in programming. This club provides the perfect platform to share knowledge and inspire young minds.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Mr. Abhishek</h4>
-                  <p class="author-role">Computer Teacher</p>
-                </div>
-              </div>
+              <footer class="testimonial-author">
+                <h4 class="author-name">Mr. Abhishek</h4>
+                <p class="author-role">Computer Teacher</p>
+              </footer>
             </div>
-          </div>
-          
-          <div class="testimonial">
+          </article>
+
+          <article class="testimonial">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
+              <div class="quote-icon" aria-hidden="true">"</div>
               <p class="testimonial-text">Programming is not just theory now - it's possible to do practicals before even going to college! The hands-on approach here is incredible.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Sahir</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
-              </div>
+              <footer class="testimonial-author">
+                <h4 class="author-name">Sahir</h4>
+                <p class="author-role">Class 11 Student</p>
+              </footer>
             </div>
-          </div>
-          
-          <div class="testimonial">
+          </article>
+
+          <article class="testimonial">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">I enhanced my IT skills significantly with the help of Abhishek sir. The personalized guidance and support made all the difference.</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <h4 class="author-name">Yuvraj</h4>
-                  <p class="author-role">Class 11 Student</p>
-                </div>
-              </div>
+              <div class="quote-icon" aria-hidden="true">"</div>
+              <p class="testimonial-text">I had no prior experience in cybersecurity, but the club’s training was so thorough that I feel confident tackling real challenges.</p>
+              <footer class="testimonial-author">
+                <h4 class="author-name">Suman</h4>
+                <p class="author-role">Class 11 Student</p>
+              </footer>
             </div>
-          </div>
+          </article>
         </div>
-        
-        <div class="testimonial-nav">
-          <button class="testimonial-prev">‹</button>
-          <button class="testimonial-next">›</button>
+
+        <div class="testimonial-controls" role="tablist" aria-label="Testimonial navigation">
+          <button class="testimonial-indicator active" aria-selected="true" aria-controls="testimonial1" role="tab" tabindex="0"></button>
+          <button class="testimonial-indicator" aria-selected="false" aria-controls="testimonial2" role="tab" tabindex="-1"></button>
+          <button class="testimonial-indicator" aria-selected="false" aria-controls="testimonial3" role="tab" tabindex="-1"></button>
+          <button class="testimonial-indicator" aria-selected="false" aria-controls="testimonial4" role="tab" tabindex="-1"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Enhanced FAQ Section -->
-  <section class="faq-section">
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about our programs</p>
+        <p class="section-subtitle">Everything you want to know about Hack The Cut Club</p>
       </div>
-      
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Can school students really create professional websites?</span>
-            <span class="faq-icon">+</span>
+
+      <div class="faq-list" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1_desc" id="faq1">
+            What is Hack The Cut Club?
+            <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p>With proper guidance in HTML, CSS, and JavaScript, our students regularly create responsive, functional websites that meet professional standards. Our hands-on approach ensures practical learning.</p>
+          <div class="faq-answer" id="faq1_desc" role="region" aria-labelledby="faq1" hidden>
+            Hack The Cut Club is a student-led organization focused on teaching digital skills such as programming, cybersecurity, and multimedia editing to young learners.
           </div>
         </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What kind of websites can you build?</span>
-            <span class="faq-icon">+</span>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2_desc" id="faq2">
+            Who can join the club?
+            <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p>Our students build a wide variety of websites including school sites, personal portfolios, business pages, e-commerce platforms, and interactive web applications. Each project is tailored to real-world needs.</p>
+          <div class="faq-answer" id="faq2_desc" role="region" aria-labelledby="faq2" hidden>
+            Any student interested in learning and growing their digital skills is welcome to join, regardless of prior experience.
           </div>
         </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How long does it take to build a website?</span>
-            <span class="faq-icon">+</span>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3_desc" id="faq3">
+            Are there any fees to join?
+            <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p>Most projects are completed within 3–7 days, depending on complexity and requirements. Simple websites can be done faster, while more complex applications may take longer.</p>
+          <div class="faq-answer" id="faq3_desc" role="region" aria-labelledby="faq3" hidden>
+            The club is free to join for all members. Some special workshops or certifications may have nominal charges.
           </div>
         </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How can I get a website made by your team?</span>
-            <span class="faq-icon">+</span>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq4_desc" id="faq4">
+            How often do meetings happen?
+            <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p>Simply contact us through our contact form below or email us directly. We'll discuss your requirements and provide a timeline and quote for your project.</p>
+          <div class="faq-answer" id="faq4_desc" role="region" aria-labelledby="faq4" hidden>
+            Meetings and workshops usually take place weekly or biweekly depending on the program and schedule.
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq5_desc" id="faq5">
+            How do I get started?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq5_desc" role="region" aria-labelledby="faq5" hidden>
+            Simply fill out the contact form below or reach out to any club member to get more information and join.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Enhanced Contact Form -->
-  <section id="contact" class="contact-section">
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section" aria-label="Contact Hack The Cut Club">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Ready to start your digital journey? We'd love to hear from you!</p>
+        <p class="section-subtitle">We’d love to hear from you!</p>
       </div>
-      
-      <div class="contact-content">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" class="form-name" placeholder="Enter your full name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="form-email" placeholder="Enter your email address" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" class="form-subject" required>
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="programs">Program Information</option>
-              <option value="website">Website Development</option>
-              <option value="collaboration">Collaboration</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" class="form-message" placeholder="Tell us about your project or inquiry..." required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <div class="btn-loader"></div>
-          </button>
-        </form>
-        
-        <div class="contact-info">
-          <div class="info-card">
-            <h3>Contact Information</h3>
-            <div class="info-item">
-              <strong>Email:</strong> hackthecut@school.edu
-            </div>
-            <div class="info-item">
-              <strong>Phone:</strong> +1 (555) 123-4567
-            </div>
-            <div class="info-item">
-              <strong>Location:</strong> Computer Lab, Main Building
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <h3>Club Hours</h3>
-            <div class="info-item">
-              <strong>Monday - Friday:</strong> 3:30 PM - 5:30 PM
-            </div>
-            <div class="info-item">
-              <strong>Saturday:</strong> 10:00 AM - 2:00 PM
-            </div>
-            <div class="info-item">
-              <strong>Sunday:</strong> Closed
-            </div>
-          </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name<span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+            placeholder="Your full name"
+            autocomplete="name"
+          />
+          <span class="error-message" id="name-error" aria-live="polite"></span>
         </div>
-      </div>
-      
-      <p class="form-status"></p>
+
+        <div class="form-group">
+          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+          <span class="error-message" id="email-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject<span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            aria-required="true"
+            placeholder="Reason for contacting"
+          />
+          <span class="error-message" id="subject-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message<span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            aria-required="true"
+            placeholder="Write your message here"
+          ></textarea>
+          <span class="error-message" id="message-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+
+        <div id="form-status" role="alert" aria-live="assertive" class="form-status"></div>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Hack The Cut Club</h3>
-          <p>Empowering students with digital skills for tomorrow's world.</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Programs</h4>
-          <ul>
-            <li><a href="#programming">Programming</a></li>
-            <li><a href="#cyber-security">Cyber Security</a></li>
-            <li><a href="#photography">Photography</a></li>
-            <li><a href="#seo">SEO</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2024 Hack The Cut Club. All rights reserved.</p>
-      </div>
+      <p>© 2025 Hack The Cut Club. All rights reserved.</p>
+      <ul class="footer-social-links" aria-label="Social media links">
+        <li><a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
